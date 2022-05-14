@@ -22,10 +22,12 @@ contract Lottery{
 
     constructor(){
         manager = msg.sender;
+        players.push(payable(manager));
     }
 
     receive() external payable{
         //require(msg.value == 10000000000000000) //wei
+        require(msg.sender != manager);
         require(msg.value == 0.1 ether, "Not the correct amount!");
         players.push(payable(msg.sender));
     }
@@ -40,16 +42,32 @@ contract Lottery{
     }
 
     function pickWinner() public{
-        require(msg.sender == manager, "You're not the manager!!!");
-        require(players.length >= 3, "Lottery needs at least 3 players!!!");
-        
+        if(players.length >= 10) {
+            pickWinner2();
+        } else {
+            require(msg.sender == manager, "You're not the manager!!!");
+            require(players.length >= 3, "Lottery needs at least 3 players!!!");
+            pickWinner2();
+        }
+    
+    }
+
+    function pickWinner2() private{
         uint r = random();
         address payable winner;
 
         uint index = r % players.length;
         winner = players[index];
         
-        winner.transfer(getBalance());
+        uint managerFee = (getBalance() * 10 ) / 100; // manager fee is 10%
+        uint winnerPrize = (getBalance() * 90 ) / 100;     // winner prize is 90%
+        
+        // transferring 90% of contract's balance to the winner
+        winner.transfer(winnerPrize);
+        
+        // transferring 10% of contract's balance to the manager
+        payable(manager).transfer(managerFee);
+
         players = new address payable[](0); //will reset the lottery
     }
 
