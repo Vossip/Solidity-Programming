@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "x",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "y",
+						"type": "string"
+					}
+				],
+				"name": "concatenate2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "str",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/challenges/ch6.sol": "Stuff"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/challenges/ch6.sol": {
+			"keccak256": "0x1c752a2fbec336b96904c0dcd09f412de000976e263ee1ffdeb69ab06bd82ee8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1e3df4508efb3af10989e1bc53213fc5c8e7a2dff76bd39da8af35a032ddc80f",
+				"dweb:/ipfs/QmNs1g8nxWfmi2qKBJSKEGpMyMz1JJpki4BarfiSp8JDyW"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,114 @@
+{
+	"id": "3ad8603525356b005862d9d714decbe9",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/test7.sol": {
+				"content": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.8.0 <=0.8.7;\n\nstruct Car{\n    string brand;\n    \n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/test7.sol": {
+				"ast": {
+					"absolutePath": "contracts/test7.sol",
+					"exportedSymbols": {
+						"Car": [
+							4
+						]
+					},
+					"id": 5,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.8",
+								".0",
+								"<=",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:32:0"
+						},
+						{
+							"canonicalName": "Car",
+							"id": 4,
+							"members": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "brand",
+									"nameLocation": "90:5:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 4,
+									"src": "83:12:0",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_storage_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "83:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "Car",
+							"nameLocation": "74:3:0",
+							"nodeType": "StructDefinition",
+							"scope": 5,
+							"src": "67:36:0",
+							"visibility": "public"
+						}
+					],
+					"src": "33:70:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

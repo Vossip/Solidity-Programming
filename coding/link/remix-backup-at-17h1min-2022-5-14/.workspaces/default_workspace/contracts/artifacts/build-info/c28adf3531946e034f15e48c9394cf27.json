@@ -1,0 +1,71 @@
+{
+	"id": "c28adf3531946e034f15e48c9394cf27",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/lottery.sol": {
+				"content": "//SPDX-License-Identifier: GPL-3.0\n \npragma solidity >=0.5.0 <0.9.0;\n\n/*\nLottery algorithm:\n1. The lottery starts by accepting ETH transactions. Anyone having an Ethereum wallet can\nsend a fixed amount of 0.1 ETH to the contract’s address.\n2. The players send ETH directly to the contract address and their Ethereum address is\nregistered. A user can send more transactions having more chances to win.\n3. There is a manager, the account that deploys and controls the contract.\n4. At some point, if there are at least 3 playesrs, he can pick a random winner from the\nplayers list. Only the manager is allowed to see the contract balance and to randomly\nselect the winner.\n5. The contract will transfer the entire balance to the winner’s address and the lottery is\nreset and ready for the next round.\n*/\n\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/lottery.sol": {
+				"ast": {
+					"absolutePath": "contracts/lottery.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.5",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:31:0"
+						}
+					],
+					"src": "37:769:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
