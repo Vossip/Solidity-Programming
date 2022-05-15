@@ -96,7 +96,7 @@ contract Lottery is VRFConsumer {
     }
 
     modifier toContinue() {
-        require(s_randomWords.length > 0, "There is no randomness jet generated");
+        require(s_randomWords.length > 0, "There is no randomness yet generated");
         _;
     }
 
