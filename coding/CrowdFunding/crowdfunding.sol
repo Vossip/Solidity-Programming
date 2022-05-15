@@ -99,7 +99,7 @@ contract crowdFunding{
         require(raisedAmount >= goal, "Goal hasn't been achieved!");
         Request storage thisRequest = requests[_requestNo];
         require(thisRequest.completed == false, "This request has been completed!");
-        require(thisRequest.noOfVoters > noOfContributors / 2, "Majority haven't agreed with this payment!"); //50% vored for this request;
+        require(thisRequest.noOfVoters > noOfContributors / 2, "Majority haven't agreed with this payment!"); //50% voted for this request;
 
         thisRequest.recipient.transfer(thisRequest.value);
         thisRequest.completed = true; //request has been completed
