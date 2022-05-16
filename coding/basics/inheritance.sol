@@ -2,7 +2,7 @@
  
 pragma solidity ^0.8.7;
 
-contract BaseContract{
+abstract contract BaseContract{ //can not be deployed on its own
     int public x;
     address public owner;
 
@@ -16,6 +16,6 @@ contract BaseContract{
     }
 }
 
-contract A is BaseContract{
+contract A is BaseContract{ //can be deployed and inherits BaseContract parameters
     int public y = 3;
 }
